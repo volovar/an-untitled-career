@@ -29,10 +29,9 @@ require("normalize.css");
 
 const theme = createTheme(
     {
-        primary: "#9846a4",
+        primary: "#af33c1",
         secondary: "#fff",
-        tertiary: "#111",
-        quaternary: "#CECECE"
+        tertiary: "#111"
     },
     {
         primary: "SF Pro Display",
@@ -59,7 +58,7 @@ export default class Presentation extends React.Component {
                         lineHeight={1}
                         textColor="secondary"
                     >
-                        Untitled <br /> Career Game
+                        An Untitled <br /> Career
                     </Heading>
                     <Text
                         margin="10px 0 0"
@@ -68,7 +67,7 @@ export default class Presentation extends React.Component {
                         fit
                         bold
                     >
-                        A short history of one person's career
+                        The work behind a decade of jobs
                     </Text>
                 </Slide>
 
