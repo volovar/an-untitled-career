@@ -2,7 +2,7 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { Deck, Heading, Image, Slide, Text } from "spectacle";
+import { Appear, Deck, Heading, List, ListItem, Slide, Text } from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -16,9 +16,14 @@ import allTheGoldblum from "./assets/video/All the Goldblum I need.mp4";
 
 // images
 import bloodlust from "./assets/images/bloodlust.jpg";
+import digReward from "./assets/images/dpz/dpz-dig-reward.png";
+import digSurvey from "./assets/images/dpz/dpz-dig-survey.png";
 import goldblumsAnon from "./assets/images/GoldblumsAnonDetail.jpg";
 import imhoAbout from "./assets/images/imhopub/imho-about.png";
 import imhoPost from "./assets/images/imhopub/imho-post.png";
+import ocfmHome from "./assets/images/ocfm/ocfm-home-plus.png";
+import ocfmPlayerPlus from "./assets/images/ocfm/ocfm-player-plus.jpg";
+import ocfmPlayer from "./assets/images/ocfm/ocfm-player-og.jpg";
 import sbHome from "./assets/images/sb/sb-home.png";
 import sbEdit from "./assets/images/sb/sb-editor.png";
 import sbProfileSketch from "./assets/images/sb/sb-sketch-profile-a.jpg";
@@ -114,6 +119,7 @@ export default class Presentation extends React.Component {
                         Goldblum's Anonymous
                     </Heading>
                     <img
+                        alt="An image of the art installation Goldblum's Anonymous. Found footage piece using various Jeff Goldblum movies cut together so he's planning to defend the Earth from an alien invasion with himself."
                         style={{
                             display: "block",
                             margin: "0.5rem auto",
@@ -130,6 +136,7 @@ export default class Presentation extends React.Component {
                         Bloodlust
                     </Heading>
                     <img
+                        alt="The art installation Bloodlust at Mocad. 11 computer monitors playing short clips of violent video games."
                         style={{
                             display: "block",
                             margin: "0.5rem auto",
@@ -154,7 +161,7 @@ export default class Presentation extends React.Component {
                 </Slide>
 
                 {/* logo page */}
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <LogoGrid />
                 </Slide>
 
@@ -179,11 +186,12 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
                         Home
                     </Heading>
                     <img
+                        alt="Home page for the StudyBlue."
                         style={{
                             border: "2px solid #555",
                             display: "block",
@@ -195,11 +203,12 @@ export default class Presentation extends React.Component {
                     />
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
                         Flashcard Editor
                     </Heading>
                     <img
+                        alt="Flash card editor for the StudyBlue."
                         style={{
                             border: "2px solid #555",
                             display: "block",
@@ -211,31 +220,36 @@ export default class Presentation extends React.Component {
                     />
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
                         User Popup
                     </Heading>
                     <div
                         style={{
                             display: "grid",
+                            gridGap: "2em",
                             gridTemplateColumns: "1fr 1fr",
                             gridTemplateRows: "1fr",
                             maxHeight: "70%"
                         }}
                     >
                         <img
+                            alt="Sketch of the StudyBlue profile popup."
                             style={{
                                 border: "2px solid #555",
                                 display: "block",
-                                margin: "0.5rem auto"
+                                margin: "0.5rem auto",
+                                maxWidth: "100%"
                             }}
                             src={sbProfileSketch}
                         />
                         <img
+                            alt="StudyBlue profile popup."
                             style={{
                                 border: "2px solid #555",
                                 display: "block",
-                                margin: "0.5rem auto"
+                                margin: "0.5rem auto",
+                                maxWidth: "100%"
                             }}
                             src={sbProfile}
                         />
@@ -263,11 +277,12 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
-                        Screen 1
+                        Survey
                     </Heading>
                     <img
+                        alt=""
                         style={{
                             border: "2px solid #555",
                             display: "block",
@@ -275,13 +290,13 @@ export default class Presentation extends React.Component {
                             maxWidth: "74%",
                             maxHeight: "70%"
                         }}
-                        src={sbHome}
+                        src={digSurvey}
                     />
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
-                        Screen 2
+                        Reward Selection
                     </Heading>
                     <img
                         style={{
@@ -291,7 +306,7 @@ export default class Presentation extends React.Component {
                             maxWidth: "74%",
                             maxHeight: "70%"
                         }}
-                        src={sbEdit}
+                        src={digReward}
                     />
                 </Slide>
 
@@ -329,7 +344,7 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
                         A Living Magazine
                     </Heading>
@@ -345,7 +360,7 @@ export default class Presentation extends React.Component {
                     />
                 </Slide>
 
-                <Slide bgColor="secondary">
+                <Slide bgColor="secondary" progressColor="tertiary">
                     <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
                         Post Page
                     </Heading>
@@ -361,20 +376,106 @@ export default class Presentation extends React.Component {
                     />
                 </Slide>
 
-                {/* End */}
-                <Slide bgColor="primary">
-                    <Heading size={3} caps lineHeight={1} textColor="secondary">
-                        The End (So Far)
-                    </Heading>
-                    <Text
-                        margin="10px 0 0"
-                        textColor="tertiary"
+                {/* OCFM+ title */}
+                <Slide bgColor="#fc7e0f">
+                    <Heading
                         size={1}
                         fit
+                        caps
+                        lineHeight={1}
+                        textColor="secondary"
+                    >
+                        OCFM+
+                    </Heading>
+                    <Heading
+                        margin="10px 0 0"
+                        textColor="tertiary"
+                        size={2}
                         bold
                     >
-                        Questions?
-                    </Text>
+                        Chrome Extension
+                    </Heading>
+                </Slide>
+
+                <Slide bgColor="secondary" progressColor="tertiary">
+                    <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
+                        Enhanced Home
+                    </Heading>
+                    <img
+                        style={{
+                            border: "2px solid #555",
+                            display: "block",
+                            margin: "0.5rem auto",
+                            maxWidth: "74%",
+                            maxHeight: "70%"
+                        }}
+                        src={ocfmHome}
+                    />
+                </Slide>
+
+                <Slide bgColor="secondary" progressColor="tertiary">
+                    <Heading margin="0 0 0.6em" size={4} textColor="tertiary">
+                        Player / Enhanced Player
+                    </Heading>
+                    <div
+                        style={{
+                            display: "grid",
+                            gridGap: "2em",
+                            gridTemplateColumns: "1fr 1fr",
+                            gridTemplateRows: "1fr",
+                            maxHeight: "70%"
+                        }}
+                    >
+                        <img
+                            style={{
+                                border: "2px solid #555",
+                                display: "block",
+                                margin: "0.5rem auto",
+                                maxWidth: "100%"
+                            }}
+                            src={ocfmPlayer}
+                        />
+                        <img
+                            style={{
+                                border: "2px solid #555",
+                                display: "block",
+                                margin: "0.5rem auto",
+                                maxWidth: "100%"
+                            }}
+                            src={ocfmPlayerPlus}
+                        />
+                    </div>
+                </Slide>
+
+                {/* Final title */}
+                <Slide bgColor="primary">
+                    <Heading margin="0 0 0.6em" size={2} textColor="secondary">
+                        Final Thoughts
+                    </Heading>
+                    <List>
+                        <Appear>
+                            <ListItem>Make lots of stuff</ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>Work on projects you enjoy</ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>Embrace change</ListItem>
+                        </Appear>
+                    </List>
+                </Slide>
+
+                {/* End */}
+                <Slide bgColor="primary">
+                    <Heading
+                        size={1}
+                        fit
+                        caps
+                        lineHeight={1}
+                        textColor="secondary"
+                    >
+                        The End (So Far)
+                    </Heading>
                 </Slide>
             </Deck>
         );
